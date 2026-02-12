@@ -5,6 +5,20 @@ let isAuthenticated = true;
 let userMessage
 let accessLevel;
 let userCategory;
+let person = "guest";
+let dietaryServices;
+
+if(person === 'employee'){
+    dietaryServices = "You are authorized to have access to our Dietary Services!";
+} else if(person==='enrolled member'){
+    dietaryServices = 'You are authorized to have access to our Dietary Services and one-on-one interaction with a dietician!';
+} else if(person==='subscriber'){
+    dietaryServices = 'You are authorized to have a partial access to facilitate our Dietary Services!';
+}else{
+    dietaryServices = 'Please enroll or at least subscribe first to avail this facility!';
+}
+
+
 
 if (userRole === "admin") {
     accessLevel = "Full access granted";
@@ -44,3 +58,4 @@ console.log("Access Level:", accessLevel);
 console.log("User Message:",userMessage);
 console.log("User Category:", userCategory);
 console.log("Authentication Status:",authenticationStatus);
+console.log("Dietary Services:", dietaryServices);
