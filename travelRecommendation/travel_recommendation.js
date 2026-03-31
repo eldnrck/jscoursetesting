@@ -110,25 +110,28 @@ document.querySelector('.clear-btn').addEventListener('click', function () {
 
 function searchPlaces(keyword) {
 
-  intro.style.display = "block";
+  const results = document.getElementById("results");
+
+  intro.style.display = "none";
   about.style.display = "none";
   contact.style.display = "none";
+  results.style.display = "flex";
 
-  intro.innerHTML = "";
+  results.innerHTML = "";
 
   keyword = keyword.toLowerCase();
   let found = false;
 
   if (keyword.includes("beach")) {
     travelData.beaches.slice(0, 2).forEach(place => {
-      intro.innerHTML += createCard(place);
+      results.innerHTML += createCard(place);
       found = true;
     });
   }
 
   if (keyword.includes("temple")) {
     travelData.temples.slice(0, 2).forEach(place => {
-      intro.innerHTML += createCard(place);
+      results.innerHTML += createCard(place);
       found = true;
     });
   }
@@ -137,7 +140,7 @@ function searchPlaces(keyword) {
   if (keyword.includes("country")) {
     travelData.countries.forEach(country => {
       country.cities.slice(0, 2).forEach(city => {
-        intro.innerHTML += createCard(city);
+        results.innerHTML += createCard(city);
         found = true;
       });
     });
@@ -147,21 +150,24 @@ function searchPlaces(keyword) {
   travelData.countries.forEach(country => {
     if (country.name.toLowerCase().includes(keyword)) {
       country.cities.forEach(city => {
-        intro.innerHTML += createCard(city);
+        results.innerHTML += createCard(city);
         found = true;
       });
     }
   });
 
-
   if (!found) {
-    intro.innerHTML = "<h2>No results found</h2>";
+    results.innerHTML = "<h2>No results found</h2>";
   }
 }
 
+
+
+
+
 function createCard(place) {
   return `
-    <div class="card">
+    <div class="createdCard">
       <h2>${place.name}</h2>
       <img src="${place.imageUrl}" width="200">
       <p>${place.description}</p>
@@ -170,15 +176,14 @@ function createCard(place) {
 }
 
 document.querySelector('.clear-btn').addEventListener('click', function () {
-  
-  // clear search input
+
   document.getElementById('searchBar').value = "";
 
-  // restore original home content
+  intro.style.display = "block";
+  document.getElementById("results").style.display = "none";
+
   intro.innerHTML = originalIntro;
 
-  // reset visibility
-  intro.style.display = "block";
   about.style.display = "none";
   contact.style.display = "none";
-}); 
+});
