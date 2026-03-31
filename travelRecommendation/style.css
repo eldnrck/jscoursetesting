@@ -12,7 +12,7 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  position: relative; /* important for centering trick */
+  position: relative;
   padding: 10px 20px;
   background-color: rgb(121, 218, 171);
   color: white;
@@ -25,13 +25,13 @@ body {
   z-index: 10;
 }
 .logo {
-  position: fixed;   /* 🔥 stays in place */
+  position: fixed;
   right: 20px;
   top: 70px;
   z-index: 1000;
 }
 
-/* CENTER */
+
 .nav-link {
   list-style: none;
   display: flex;
@@ -49,7 +49,7 @@ li:hover{
     padding: 5px;
 }
 
-/* RIGHT */
+
 .nav-search {
   display: flex;
   align-items: center;
@@ -59,7 +59,6 @@ li:hover{
   margin-left: auto;
 }
 
-/* input */
 .nav-search input {
   border: none;
   padding: 10px;
@@ -67,7 +66,6 @@ li:hover{
   width: 200px;
 }
 
-/* buttons */
 .nav-search button {
   border: none;
   padding: 10px 12px;
@@ -76,12 +74,10 @@ li:hover{
   color: white;
 }
 
-/* hover effect */
 .nav-search button:hover {
   background-color: #777;
 }
 
-/* links style */
 .nav-link a {
   text-decoration: none;
   color: white;
@@ -98,14 +94,12 @@ li:hover{
   
 }
 
-/* logo (left side) */
 .logo {
   display: flex;
   flex-direction: column; /* stack icons vertically */
   gap: 10px;
 }
 
-/* intro (right side) */
 #introH1{
     font-size: 60px;
 }
@@ -114,12 +108,12 @@ li:hover{
   flex-wrap: wrap;
   gap: 20px;
 
-  width: 100%;          /* 🔥 IMPORTANT */
-  max-width: 1200px;    /* optional */
+  width: 100%;          
+  max-width: 1200px;    
 }
 .logo img {
-  width: 50px;   /* adjust this */
-  height: auto;  /* keeps aspect ratio */
+  width: 50px;   
+  height: auto;  
 }
 #intro-book{
     border-color: black;
@@ -193,8 +187,8 @@ li:hover{
 }
 #contactUsContainer {
   display: flex;
-  justify-content: space-between; /* separates left and right */
-  align-items: flex-start;        /* keeps top alignment */
+  justify-content: space-between;
+  align-items: flex-start;        
 }
 
 #contactUsForm {
