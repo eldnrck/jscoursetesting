@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-image: url(./bodybackground.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  position: relative; /* important for centering trick */
+  padding: 10px 20px;
+  background-color: rgb(121, 218, 171);
+  color: white;
+}
+
+/* LEFT */
+#logo {
+  margin: 0;
+}
+
+/* CENTER */
+.nav-link {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+li {
+  transition: all 0.3s ease;
+}
+li:hover{
+    border-radius: 10px;
+    background-color: rgb(74, 63, 74);
+    padding: 5px;
+}
+
+/* RIGHT */
+.nav-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden; 
+  margin-left: auto;
+}
+
+/* input */
+.nav-search input {
+  border: none;
+  padding: 10px;
+  outline: none;
+  width: 200px;
+}
+
+/* buttons */
+.nav-search button {
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  background-color: #555;
+  color: white;
+}
+
+/* hover effect */
+.nav-search button:hover {
+  background-color: #777;
+}
+
+/* links style */
+.nav-link a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-link a:hover {
+  color: #00bcd4;
+}
+
+.hero {
+  display: flex;
+  align-items: center;   /* vertical center */
+  gap: 30px;             /* space between logo and text */
+  margin-top: 8%;
+  padding: 20px;
+}
+
+/* logo (left side) */
+.logo {
+  display: flex;
+  flex-direction: column; /* stack icons vertically */
+  gap: 10px;
+}
+
+/* intro (right side) */
+#introH1{
+    font-size: 60px;
+}
+.intro {
+  max-width: 600px;
+  color: white;
+}
+.logo img {
+  width: 50px;   /* adjust this */
+  height: auto;  /* keeps aspect ratio */
+}
+#intro-book{
+    border-color: black;
+    background-color: rgb(181, 255, 170, 0.7);
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    font-size:x-large;
+    border-radius: 50px;
+}
+
+#intro-book:hover{
+    background-color: rgba(20, 48, 16);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+/* ABOUT US */
+
+#aboutUsH1{
+    margin-top: -100px;
+    font-size: 80px;
+}
+#ourTeam{
+    font-size: 40px;
+}
+
+.team-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  color: white;
+}
+
+.card {
+  max-width: 250px;
+  background-color: rgb(181, 255, 170, 0.7);
+  padding: 10px;
+  border-radius: 30px;
+  color: black;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 24px;
+}
+
+.aboutUsBtn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(121, 218, 171);
+  color: white;
+  font-weight: bold;
+}
+
+/*CONTACT US*/
+#contactUsH1{
+    font-size: 80px;
+    margin-top: 50px;
+}
+#contactUsContainer {
+  display: flex;
+  justify-content: space-between; /* separates left and right */
+  align-items: flex-start;        /* keeps top alignment */
+}
+
+#contactUsForm {
+  background-color: rgb(181, 255, 170, 0.2);
+  margin-left: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 30px;
+}
+
+#contactUsSubmit{
+    border-color: black;
+    background-color: rgb(11, 82, 0);
+    font-family: 'Poppins', sans-serif;
+    font-size:x-large;
+    border-radius: 10px;
+    color: white;
+}
+
+.forms{
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+textarea{
+    border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.card {
+  margin: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+}
